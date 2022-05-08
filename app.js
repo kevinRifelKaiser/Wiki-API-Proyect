@@ -34,7 +34,7 @@ app.get('/articles', function(req, res) {
 });
 
 //REST API: Post rout
-app.post('/article', function(req, res) {
+app.post('/articles', function(req, res) {
 
     const newArticle = new Article({
         title: req.body.title,
@@ -51,14 +51,30 @@ app.post('/article', function(req, res) {
 
 }); 
 
-//Home rout
-app.get('/', function(req, res) {
-    res.render('list', {});
+//REST API: Delete rout
+app.delete('/articles' , function(req, res) {
+    Article.deleteMany(function(err) {
+        if(!err) {
+            res.send('Successfully deleted all articles.');
+        } else {
+            res.send(err);
+        }
+    });
 });
 
 
 
 
+
+
+
+
+
+
+//Home rout
+app.get('/', function(req, res) {
+    res.render('list', {});
+});
 
 //Server
 app.listen(port, function(res, req) {
