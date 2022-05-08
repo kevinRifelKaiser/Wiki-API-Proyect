@@ -22,7 +22,16 @@ const wikiSchema = new mongoose.Schema ({
 //Mongoose model
 const Article = mongoose.model('Article', wikiSchema);
 
-
+//REST API: Get rout
+app.get('/articles', function(req, res) {
+    Article.find({}, function(err, foundArticles) {
+        if(!err) {
+            res.send(foundArticles);
+        } else {
+            res.send(err);
+        }
+    });
+});
 
 
 //Home rout
