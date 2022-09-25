@@ -1,26 +1,32 @@
 //Express
-const express = require('express');
-const app = express();
-const port = 3000;
+const express = require('express')
+const app = express()
+const port = 3000
+var path = require('path');
 
 //EJS
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
 
-//BodyParser
+//BodyParser    
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 
 //Mongoose
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/wikiDB');
+
 //Mongoose schema
 const wikiSchema = new mongoose.Schema ({
     title: String,
     content: String
 });
+
 //Mongoose model
 const Article = mongoose.model('Article', wikiSchema);
+
+//Use static CSS sheet
+app.use(express.static(path.join(__dirname + '/public')));
 
 //Requests targeting all Articles//
 app.route('/articles')
@@ -107,9 +113,6 @@ app.route('/articles/:articleTitle')
         }
     );
 });
-
-
-
 
 //Home rout
 app.get('/', function(req, res) {
