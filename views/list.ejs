@@ -13,75 +13,19 @@
 <body>
   <section>
     <div class="section-div">
-      <h1>Hello world, this is the wiki API</h1>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            HTTP Verbs
-          </div>
-          <div class="col">
-            /articles
-          </div>
-          <div class="col">
-            /sfecificArticle
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            GET
-          </div>
-          <div class="col">
-            /articles
-          </div>
-          <div class="col">
-            /sfecificArticle
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            POST
-          </div>
-          <div class="col">
-            /articles
-          </div>
-          <div class="col">
-            /sfecificArticle
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            PUT
-          </div>
-          <div class="col">
-            /articles
-          </div>
-          <div class="col">
-            /sfecificArticle
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            PATCH
-          </div>
-          <div class="col">
-            /articles
-          </div>
-          <div class="col">
-            /sfecificArticle
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            DELETE
-          </div>
-          <div class="col">
-            /articles
-          </div>
-          <div class="col">
-            /sfecificArticle
-          </div>
-        </div>
-      </div>
+        <h1 class="section-title">Hello world, I'm the wiki API</h1>
+        <h3 class="subtitle">I can handle articles like this:</h3>
+        <img src="css/API-article.JPG" alt="JSON type article" class="article-image">
+        <h3 class="subtitle">How can you manage my articles?</h3>
+        <ul class="list">
+          <li class="list-item"><span class="get">GET </span>| Get all the articles --> /articles</li>
+          <li class="list-item"><span class="get">GET </span>| Get a specific article --> /article/articleTitle</li>
+          <li class="list-item"><span class="post">POST </span>| Create a new article --> /articles</li>
+          <li class="list-item"><span class="update">PUT </span>| Update all the fields of a specific article --> /articles/articleTitle</li>
+          <li class="list-item"><span class="update">PATCH </span>| Update one or more fields of a specific article --> /articles/articleTitle</li>
+          <li class="list-item"><span class="delete">DELETE </span>| Delete a specific article --> /articles/articleTitle</li>
+          <li class="list-item"><span class="delete">DELETE </span>| WARNING! Delete all the articles --> /articles</li>
+        </ul>
     </div>
   </section>
 

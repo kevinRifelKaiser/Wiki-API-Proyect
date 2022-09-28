@@ -1,6 +1,6 @@
 
 body {
-  background-color: #1b1c1e;
+  background-color: #252525;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -8,15 +8,10 @@ section {
   margin: 2rem 0;
 }
 
-h1 {
-  font-weight: 400;
-  color: white;
-}
-
 .section-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   border: white solid 2px;
   border-radius: 5px;
   width: 50%;
@@ -25,14 +20,49 @@ h1 {
   padding: 2rem;
 }
 
-.list-group {
-  padding: 2rem 0;
-}
-
-.container {
-  margin: 1rem 0;
-}
-
-.row, .col {
+h1 {
+  font-weight: 400;
   color: white;
 }
+
+.section-title {
+  margin: 0 auto 1rem auto;
+}
+
+h3 {
+  color: white;
+  margin: 1.5rem 0; 
+}
+
+.article-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.list {  
+  color: white;
+}
+
+.list-item {
+  list-style: none;
+  margin: 0.9rem 0;
+}
+
+.get {
+  color: green;
+}
+
+.post {
+  color: blue;
+}
+
+.update {
+  color: aqua;
+}
+
+.delete {
+  color: red;
+}
+
+
+
