@@ -1,6 +1,7 @@
 import { Article } from './db.js';
 import express from 'express';
 import path from 'path';
+import bodyParser from 'body-parser';
 import { PORT } from './config.js';
 
 //Express
@@ -10,7 +11,8 @@ const app = express();
 app.set('view engine', 'ejs');
 
 //BodyParser
-app.use(express.json());
+//app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Use static CSS sheet
 const __dirname = path.resolve();
